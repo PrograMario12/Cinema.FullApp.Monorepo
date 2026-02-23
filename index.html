@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The School of the Open - Official Film Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">The School of the Open</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="request-screening.html" class="btn-primary">Request a Screening</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="video-background">
+            <!-- Placeholder for video background -->
+            <div class="video-overlay"></div>
+            <video autoplay muted loop playsinline poster="assets/hero-poster.jpg" id="bg-video">
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content fade-in">
+            <h1>The School of the Open</h1>
+            <p class="tagline">A film about finding your voice in the silence.</p>
+            <div class="hero-buttons">
+                <a href="#trailer" class="btn-secondary">Watch Trailer</a>
+                <a href="request-screening.html" class="btn-primary">Host a Screening</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trailer Section -->
+    <section id="trailer" class="section-dark">
+        <div class="container">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=bxJH-WnQn3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Synopsis Section -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">Synopsis</h2>
+            <p class="lead-text">
+                "The School of the Open" explores the transformative power of nature and community. Set against the backdrop of an alternative education program, the film follows a group of students as they navigate the challenges of adolescence, identity, and the search for meaning in a rapidly changing world.
+            </p>
+            <p>
+                Through intimate cinematography and raw, honest storytelling, the film invites viewers to question what it truly means to learn, to grow, and to be open to the unexpected lessons life has to offer.
+            </p>
+            <p class="release-year">Released: 2024</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+            <p>&copy; 2024 The School of the Open. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

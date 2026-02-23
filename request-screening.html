@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Screening - The School of the Open</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">The School of the Open</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="request-screening.html" class="btn-primary active">Request a Screening</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Host a Screening</h1>
+        </div>
+    </header>
+
+    <!-- Screening Request Form -->
+    <section class="section-light">
+        <div class="container">
+            <p class="screening-intro">
+                Interested in bringing "The School of the Open" to your community, school, or organization?
+                Please fill out the form below, and our team will get back to you with details on licensing and availability.
+            </p>
+            <form id="screening-form" class="film-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="org-name">Organization / Institution</label>
+                        <input type="text" id="org-name" name="org-name" required placeholder="University, Film Club, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-name">Contact Person</label>
+                        <input type="text" id="contact-name" name="contact-name" required placeholder="Your Name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="screening-type">Type of Screening</label>
+                    <select id="screening-type" name="screening-type" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="educational">Educational (K-12 or University)</option>
+                        <option value="community">Community / Non-Profit</option>
+                        <option value="festival">Film Festival</option>
+                        <option value="corporate">Corporate</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="estimated-date">Estimated Date</label>
+                    <input type="date" id="estimated-date" name="estimated-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Additional Details / Purpose of Screening</label>
+                    <textarea id="details" name="details" rows="5" placeholder="Tell us more about your event..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+            <p>&copy; 2024 The School of the Open. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
