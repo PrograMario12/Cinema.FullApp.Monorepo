@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const logger = require('../utils/logger');
 
 const protect = (req, res, next) => {
     let token;
@@ -13,7 +14,7 @@ const protect = (req, res, next) => {
             req.user = decoded;
             next();
         } catch (error) {
-            console.error(error);
+            logger.error(error);
             res.status(401).json({ message: 'Not authorized, token failed' });
         }
     }
