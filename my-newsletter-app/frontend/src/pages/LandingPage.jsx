@@ -63,20 +63,20 @@ const LandingPage = () => {
                     <VideoMaskTransition />
 
                     {/* About Section */}
-                    <section id="about" className="py-48 px-6 md:px-12 bg-[#0F1115] relative z-10">
-                        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-start">
-                            <div className="sticky top-32">
+                    <section id="about" className="py-24 md:py-48 px-6 md:px-12 bg-[#0F1115] relative z-10">
+                        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-24 items-start">
+                            <div className="md:sticky md:top-32 mb-12 md:mb-0">
                                 <span className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold block mb-6">Origins</span>
-                                <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9] md:leading-tight">
                                     La <br /> <span className="italic text-gray-400">pedagogía</span> <br /> del espíritu.
                                 </h2>
                             </div>
-                            <div className="pt-2 md:pt-32">
+                            <div className="pt-0 md:pt-32">
                                 <ScrollyText 
                                     text="The School of the Open nace como un diario visual sobre la desescolarización y el descubrimiento de la libertad en el aprendizaje. Desde su concepción en las montañas hasta las aulas abiertas de la ciudad."
-                                    className="text-2xl md:text-4xl text-white leading-tight font-light mb-12"
+                                    className="text-xl md:text-4xl text-white leading-tight font-light mb-12"
                                 />
-                                <p className="text-gray-500 leading-relaxed text-lg max-w-md">
+                                <p className="text-gray-500 leading-relaxed text-base md:text-lg max-w-md">
                                     Este proyecto captura la esencia de lo que significa aprender cuando el mundo es tu salón de clases y el tiempo no tiene paredes.
                                 </p>
                             </div>
