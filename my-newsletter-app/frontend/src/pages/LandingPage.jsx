@@ -14,7 +14,7 @@ const LandingPage = () => {
     const [showIntro, setShowIntro] = useState(true);
 
     return (
-        <div className="relative min-h-screen overflow-x-hidden">
+        <div className="relative min-h-screen">
             <AnimatePresence>
                 {showIntro && (
                     <CinematicIntro key="intro" onComplete={() => setShowIntro(false)} />
@@ -25,11 +25,11 @@ const LandingPage = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: showIntro ? 0 : 1 }}
                 transition={{ duration: 2, ease: "easeInOut" }}
-                className="relative overflow-x-hidden"
+                className="relative"
             >
                 <Layout>
                     {/* Hero Section */}
-                    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+                    <section id="home" className="relative h-screen flex items-center justify-center overflow-x-hidden">
                         <div className="absolute inset-0 z-0">
                             <img 
                                 src="/cinema_hero_background.png" 

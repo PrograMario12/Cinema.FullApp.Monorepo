@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
     ];
 
     return (
-        <div className="relative min-h-screen bg-[#0F1115] text-white selection:bg-white selection:text-black overflow-x-hidden">
+        <div className="relative min-h-screen bg-[#0F1115] text-white selection:bg-white selection:text-black">
             <CustomCursor />
             {/* Navigation */}
             <nav className={`fixed top-0 z-[100] w-full transition-all duration-500 ${isScrolled ? 'py-4 bg-[#0F1115]/80 backdrop-blur-xl border-b border-white/5' : 'py-8 bg-transparent'}`}>

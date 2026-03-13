@@ -8,7 +8,7 @@ const CinematicIntro = ({ onComplete }) => {
         const timers = [];
         
         // Start sequence
-        timers.push(setTimeout(() => setStep(1), 800));  // Image focus + Bokeh Start
+        timers.push(setTimeout(() => setStep(1), 1000));  // Image focus + Bokeh Start
         timers.push(setTimeout(() => setStep(2), 3500)); // Title Reveal
         timers.push(setTimeout(() => setStep(3), 6500)); // Finish/Fade out
         
@@ -20,11 +20,11 @@ const CinematicIntro = ({ onComplete }) => {
     return (
         <div className="fixed inset-0 z-[1000] bg-black flex items-center justify-center overflow-hidden">
             {/* 1. Bokeh Background Particles */}
-            <div className="absolute inset-0 z-[1001] pointer-events-none overflow-hidden" style={{ position: 'absolute' }}>
+            <div className="absolute inset-0 z-[1001] pointer-events-none overflow-hidden">
                 {[...Array(6)].map((_, i) => (
                     <motion.div
                         key={`particle-${i}`}
-                        layout={false}
+                        layoutId={`particle-${i}`}
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ 
                             opacity: step >= 1 ? [0, 0.15, 0] : 0, 
