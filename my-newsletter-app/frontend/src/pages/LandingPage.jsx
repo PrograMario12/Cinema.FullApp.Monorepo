@@ -49,15 +49,27 @@ const LandingPage = () => {
                             >
                                 A Documentary Film
                             </motion.span>
-                            <h1 className="text-7xl md:text-9xl font-black mb-12 tracking-tighter uppercase leading-[0.85]">
+                            <h1 className="text-7xl md:text-9xl font-black mb-8 tracking-tighter uppercase leading-[0.85]">
                                 The School <br /> <span className="text-gray-500 italic">of the Open</span>
                             </h1>
-                            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-                                <button className="px-10 py-4 bg-white text-black font-black uppercase text-[10px] tracking-widest rounded-full hover:bg-gray-200 transition-all shadow-2xl">
+                            
+                            <motion.p 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="text-lg md:text-2xl text-gray-300 font-light max-w-3xl mx-auto mb-12 leading-relaxed"
+                            >
+                                A feature documentary exploring the de-schooling movement <br className="hidden md:block" /> and the radical pursuit of true education.
+                            </motion.p>
+
+                            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                                <button className="group relative px-10 py-5 bg-white text-black font-black uppercase text-[11px] tracking-[0.2em] rounded-full hover:bg-amber-500 hover:text-white transition-all duration-500 shadow-2xl flex items-center gap-3">
                                     Watch Trailer
+                                    <div className="w-2 h-2 bg-black group-hover:bg-white rounded-full animate-pulse"></div>
                                 </button>
-                                <a href="#about" className="text-[10px] uppercase font-bold tracking-widest border-b border-white/20 pb-1 hover:border-white transition-all">
-                                    Explore the Story
+                                
+                                <a href="#request-screening" className="px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black uppercase text-[11px] tracking-[0.2em] rounded-full hover:bg-white/10 transition-all duration-500">
+                                    Request Screening
                                 </a>
                             </div>
                         </div>

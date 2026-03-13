@@ -36,6 +36,31 @@ const EventsSection = () => {
     return (
         <section id="events" className="py-48 px-6 md:px-12 bg-[#0a0a0a]">
             <div className="max-w-7xl mx-auto">
+                {/* Festivals & Awards Proof */}
+                <div className="mb-32 text-center">
+                    <span className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold block mb-12">Festivals & Awards</span>
+                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 hover:opacity-100 transition-opacity duration-1000">
+                        {/* Laurel Placeholder 1 */}
+                        <div className="flex flex-col items-center max-w-[120px]">
+                            <div className="text-3xl mb-2">🏆</div>
+                            <span className="text-[9px] font-black uppercase tracking-widest leading-tight">Official Selection</span>
+                            <span className="text-[8px] italic text-gray-500">Sundance 2026</span>
+                        </div>
+                        {/* Laurel Placeholder 2 */}
+                        <div className="flex flex-col items-center max-w-[120px] border-x border-white/10 px-8">
+                            <div className="text-3xl mb-2">🎬</div>
+                            <span className="text-[9px] font-black uppercase tracking-widest leading-tight">Winner Best Doc</span>
+                            <span className="text-[8px] italic text-gray-500">IDFA Amsterdam</span>
+                        </div>
+                        {/* Laurel Placeholder 3 */}
+                        <div className="flex flex-col items-center max-w-[120px]">
+                            <div className="text-3xl mb-2">✨</div>
+                            <span className="text-[9px] font-black uppercase tracking-widest leading-tight">In Consideration</span>
+                            <span className="text-[8px] italic text-gray-500">Cannes Lions</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="mb-24">
                     <span className="text-[10px] uppercase tracking-[0.5em] text-amber-500 font-black block mb-6">On the Road</span>
                     <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-white">

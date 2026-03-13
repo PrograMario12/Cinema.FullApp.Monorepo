@@ -14,9 +14,9 @@ const Layout = ({ children }) => {
     }, []);
 
     const navLinks = [
+        { name: 'Home', href: '#' },
         { name: 'About', href: '#about' },
-        { name: 'Team', href: '#team' },
-        { name: 'Events', href: '#events' },
+        { name: 'Festivals', href: '#events' },
         { name: 'Press', href: '#press' },
         { name: 'Contact', href: '#contact' },
     ];
@@ -31,19 +31,19 @@ const Layout = ({ children }) => {
                     </a>
 
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex gap-10 items-center">
+                    <div className="hidden md:flex gap-12 items-center">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-gray-400 transition-colors"
+                                className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-all duration-500"
                             >
                                 {link.name}
                             </a>
                         ))}
                         <a 
                             href="#request-screening" 
-                            className="px-6 py-2 border border-white/20 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all"
+                            className="ml-4 px-5 py-2 border border-white/10 rounded-full text-[9px] font-bold uppercase tracking-[0.3em] text-white/60 hover:bg-white hover:text-black hover:border-white transition-all duration-500"
                         >
                             Request Screening
                         </a>
