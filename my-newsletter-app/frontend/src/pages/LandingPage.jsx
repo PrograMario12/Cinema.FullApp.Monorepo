@@ -6,6 +6,8 @@ import ScrollyText from '../components/sections/ScrollyText';
 import VideoMaskTransition from '../components/sections/VideoMaskTransition';
 import TeamSection from '../components/sections/TeamSection';
 import EventsSection from '../components/sections/EventsSection';
+import PressKitSection from '../components/sections/PressKitSection';
+import ContactSection from '../components/sections/ContactSection';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LandingPage = () => {
@@ -91,6 +93,10 @@ const LandingPage = () => {
             <TeamSection />
 
             <EventsSection />
+
+            <PressKitSection />
+
+            <ContactSection />
 
         </Layout>
             </motion.div>
