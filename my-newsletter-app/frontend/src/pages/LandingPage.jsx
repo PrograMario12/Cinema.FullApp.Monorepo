@@ -5,6 +5,7 @@ import CinematicIntro from '../components/layout/CinematicIntro';
 import ScrollyText from '../components/sections/ScrollyText';
 import VideoMaskTransition from '../components/sections/VideoMaskTransition';
 import TeamSection from '../components/sections/TeamSection';
+import EventsSection from '../components/sections/EventsSection';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LandingPage = () => {
@@ -69,16 +70,16 @@ const LandingPage = () => {
                             <div className="md:sticky md:top-32 mb-12 md:mb-0">
                                 <span className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold block mb-6">Origins</span>
                                 <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9] md:leading-tight">
-                                    La <br /> <span className="italic text-gray-400">pedagogía</span> <br /> del espíritu.
+                                    The <br /> <span className="italic text-gray-400">pedagogy</span> <br /> of spirit.
                                 </h2>
                             </div>
                             <div className="pt-0 md:pt-32">
                                 <ScrollyText 
-                                    text="The School of the Open nace como un diario visual sobre la desescolarización y el descubrimiento de la libertad en el aprendizaje. Desde su concepción en las montañas hasta las aulas abiertas de la ciudad."
+                                    text="The School of the Open was born as a visual diary about unschooling and the discovery of freedom in learning. From its conception in the mountains to the open classrooms of the city."
                                     className="text-xl md:text-4xl text-white leading-tight font-light mb-12"
                                 />
                                 <p className="text-gray-500 leading-relaxed text-base md:text-lg max-w-md">
-                                    Este proyecto captura la esencia de lo que significa aprender cuando el mundo es tu salón de clases y el tiempo no tiene paredes.
+                                    This project captures the essence of what it means to learn when the world is your classroom and time has no walls.
                                 </p>
                             </div>
                         </div>
@@ -89,9 +90,7 @@ const LandingPage = () => {
 
             <TeamSection />
 
-            <section id="events" className="py-32 flex justify-center border-t border-white/5 bg-black">
-                <p className="text-gray-600 uppercase tracking-widest text-xs">Events & Screenings Section</p>
-            </section>
+            <EventsSection />
 
         </Layout>
             </motion.div>
