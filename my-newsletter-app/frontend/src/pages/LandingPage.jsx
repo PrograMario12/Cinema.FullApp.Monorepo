@@ -87,23 +87,73 @@ const LandingPage = () => {
                     {/* Masking Transition */}
                     <VideoMaskTransition />
 
-                    {/* About Section */}
+                    {/* About Section - Narrative Storytelling */}
                     <section id="about" className="py-24 md:py-48 px-6 md:px-12 bg-[#0F1115] relative z-10">
-                        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-24 items-start">
-                            <div className="md:sticky md:top-32 mb-12 md:mb-0">
-                                <span className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold block mb-6">Origins</span>
-                                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9] md:leading-tight">
-                                    The <br /> <span className="italic text-gray-400">pedagogy</span> <br /> of spirit.
-                                </h2>
-                            </div>
-                            <div className="pt-0 md:pt-32">
-                                <ScrollyText 
-                                    text="The School of the Open was born as a visual diary about unschooling and the discovery of freedom in learning. From its conception in the mountains to the open classrooms of the city."
-                                    className="text-xl md:text-4xl text-white leading-tight font-light mb-12"
-                                />
-                                <p className="text-gray-500 leading-relaxed text-base md:text-lg max-w-md">
-                                    This project captures the essence of what it means to learn when the world is your classroom and time has no walls.
-                                </p>
+                        <div className="max-w-7xl mx-auto">
+                            <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-start mb-32">
+                                <div className="md:sticky md:top-32">
+                                    <span className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold block mb-6">Origins</span>
+                                    <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9] md:leading-tight">
+                                        The <br /> <span className="italic text-gray-400">pedagogy</span> <br /> of spirit.
+                                    </h2>
+                                </div>
+                                <div className="pt-0 md:pt-32">
+                                    <ScrollyText 
+                                        text="The School of the Open was born as a visual diary about unschooling and the discovery of freedom in learning."
+                                        className="text-xl md:text-3xl text-white leading-tight font-light mb-12"
+                                    />
+                                    
+                                    {/* Micro-sections */}
+                                    <div className="space-y-24 mt-32">
+                                        {/* Origin */}
+                                        <motion.div 
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 1 }}
+                                            className="group"
+                                        >
+                                            <div className="aspect-video mb-8 overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                                                <img src="/about_1.png" alt="Misty Mountains" className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                                            </div>
+                                            <h4 className="text-amber-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4">I. The Origin</h4>
+                                            <p className="text-gray-400 leading-relaxed font-light">
+                                                Conceived in the silence of the mountains, the project began as a personal quest to document the breakdown of traditional educational walls.
+                                            </p>
+                                        </motion.div>
+
+                                        {/* Mission */}
+                                        <motion.div 
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 1 }}
+                                            className="group"
+                                        >
+                                            <div className="aspect-video mb-8 overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                                                <img src="/about_2.png" alt="Child in Nature" className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                                            </div>
+                                            <h4 className="text-amber-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4">II. The Mission</h4>
+                                            <p className="text-gray-400 leading-relaxed font-light">
+                                                To capture the raw essence of human curiosity when it is not bound by schedules, grades, or artificial hierarchies of knowledge.
+                                            </p>
+                                        </motion.div>
+
+                                        {/* Vision */}
+                                        <motion.div 
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 1 }}
+                                            className="group"
+                                        >
+                                            <div className="aspect-video mb-8 overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                                                <img src="/about_3.png" alt="Open Classroom" className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                                            </div>
+                                            <h4 className="text-amber-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4">III. The Vision</h4>
+                                            <p className="text-gray-400 leading-relaxed font-light">
+                                                Building a world where the classroom is everywhere, and every interaction is an opportunity for authentic discovery.
+                                            </p>
+                                        </motion.div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
