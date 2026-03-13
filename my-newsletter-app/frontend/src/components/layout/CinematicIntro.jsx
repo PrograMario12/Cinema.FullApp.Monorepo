@@ -20,10 +20,10 @@ const CinematicIntro = ({ onComplete }) => {
     return (
         <div className="fixed inset-0 z-[1000] bg-black flex items-center justify-center overflow-hidden">
             {/* 1. Bokeh Background Particles */}
-            <div className="absolute inset-0 z-[1001] pointer-events-none">
+            <div className="absolute inset-0 z-[1001] pointer-events-none overflow-hidden">
                 {[...Array(6)].map((_, i) => (
                     <motion.div
-                        key={i}
+                        key={`particle-${i}`}
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ 
                             opacity: step >= 1 ? [0, 0.15, 0] : 0, 

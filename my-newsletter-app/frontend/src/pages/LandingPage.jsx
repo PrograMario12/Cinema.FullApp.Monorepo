@@ -17,7 +17,7 @@ const LandingPage = () => {
         <>
             <AnimatePresence>
                 {showIntro && (
-                    <CinematicIntro onComplete={() => setShowIntro(false)} />
+                    <CinematicIntro key="intro" onComplete={() => setShowIntro(false)} />
                 )}
             </AnimatePresence>
 
@@ -25,6 +25,7 @@ const LandingPage = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: showIntro ? 0 : 1 }}
                 transition={{ duration: 2, ease: "easeInOut" }}
+                className="relative"
             >
                 <Layout>
                     {/* Hero Section */}
