@@ -23,6 +23,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/subscribers', require('./routes/subscribers'));
+app.use('/api/screenings', require('./routes/screenings'));
 
 app.get('/', (req, res) => {
     res.send('API is running...');
