@@ -8,18 +8,46 @@ const CinematicIntro = ({ onComplete }) => {
         const timers = [];
         
         // Start sequence
-        timers.push(setTimeout(() => setStep(1), 500));  // Image focus
-        timers.push(setTimeout(() => setStep(2), 3000)); // Title Reveal
-        timers.push(setTimeout(() => setStep(3), 6000)); // Finish/Fade out
+        timers.push(setTimeout(() => setStep(1), 800));  // Image focus + Bokeh Start
+        timers.push(setTimeout(() => setStep(2), 3500)); // Title Reveal
+        timers.push(setTimeout(() => setStep(3), 6500)); // Finish/Fade out
         
-        timers.push(setTimeout(onComplete, 7500));
+        timers.push(setTimeout(onComplete, 8000));
 
         return () => timers.forEach(clearTimeout);
     }, [onComplete]);
 
     return (
         <div className="fixed inset-0 z-[1000] bg-black flex items-center justify-center overflow-hidden">
-            {/* Film Grain Texture - Lower opacity for better visibility */}
+            {/* 1. Bokeh Background Particles */}
+            <div className="absolute inset-0 z-[1001] pointer-events-none">
+                {[...Array(6)].map((_, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ 
+                            opacity: step >= 1 ? [0, 0.15, 0] : 0, 
+                            scale: step >= 1 ? [1, 1.5, 1] : 0,
+                            x: [Math.random() * 100 - 50, Math.random() * 100 - 50],
+                            y: [Math.random() * 100 - 50, Math.random() * 100 - 50],
+                        }}
+                        transition={{ 
+                            duration: 8 + i, 
+                            repeat: Infinity, 
+                            ease: "easeInOut" 
+                        }}
+                        className="absolute rounded-full bg-white/10 blur-[80px]"
+                        style={{
+                            width: `${200 + i * 50}px`,
+                            height: `${200 + i * 50}px`,
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                        }}
+                    />
+                ))}
+            </div>
+
+            {/* 2. Film Grain Texture */}
             <div className="absolute inset-0 pointer-events-none z-[1010] opacity-[0.02]">
                 <svg className="w-full h-full opacity-30">
                     <filter id="noise">

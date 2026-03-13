@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Instagram, Twitter, Mail } from 'lucide-react';
+import CustomCursor from './CustomCursor';
 
 const Layout = ({ children }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
 
     return (
         <div className="min-h-screen bg-[#0F1115] text-white selection:bg-white selection:text-black">
+            <CustomCursor />
             {/* Navigation */}
             <nav className={`fixed top-0 z-[100] w-full transition-all duration-500 ${isScrolled ? 'py-4 bg-[#0F1115]/80 backdrop-blur-xl border-b border-white/5' : 'py-8 bg-transparent'}`}>
                 <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">

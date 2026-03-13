@@ -24,7 +24,7 @@ const LandingPage = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: showIntro ? 0 : 1 }}
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 2, ease: "easeInOut" }}
             >
                 <Layout>
                     {/* Hero Section */}
@@ -37,6 +37,15 @@ const LandingPage = () => {
                                 src="/cinema_hero_background.png" 
                                 alt="The School of the Open" 
                                 className="w-full h-full object-cover"
+                            />
+                            {/* Floating Parallax Element 1 */}
+                            <motion.div 
+                                animate={{ 
+                                    y: [0, -20, 0],
+                                    rotate: [0, 5, 0]
+                                }}
+                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute top-1/4 left-10 w-32 h-32 border border-white/5 rounded-full blur-xl pointer-events-none"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0F1115] via-transparent to-black/40"></div>
                         </div>
