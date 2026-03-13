@@ -62,7 +62,7 @@ const VideoMaskTransition = () => {
                                             playsInline
                                             className="w-full h-full object-cover scale-[1.5]"
                                         >
-                                            <source src="https://assets.mixkit.co/videos/preview/mixkit-cinematic-shot-of-a-misty-forest-at-dawn-43183-large.mp4" type="video/mp4" />
+                                            <source src="/test.mp4" type="video/mp4" />
                                         </video>
                                         <div className="absolute inset-0 bg-amber-500/10 mix-blend-overlay"></div>
                                     </motion.div>
