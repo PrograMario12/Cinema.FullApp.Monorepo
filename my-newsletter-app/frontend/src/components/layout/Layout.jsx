@@ -79,22 +79,72 @@ const Layout = ({ children }) => {
             <main>{children}</main>
 
             {/* Footer */}
-            <footer className="py-24 border-t border-white/5 bg-black">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-12 items-center text-center md:text-left">
-                    <div>
-                        <h3 className="text-xl font-bold uppercase tracking-tighter mb-4">The School of the Open</h3>
-                        <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
-                            Una exploración cinematográfica sobre la educación alternativa y el espíritu humano.
-                        </p>
+            <footer className="pt-32 pb-12 border-t border-white/5 bg-black relative overflow-hidden">
+                {/* Subtle Background Text */}
+                <div className="absolute bottom-0 left-0 text-[20vw] font-black text-white/[0.02] leading-none pointer-events-none select-none tracking-tighter">
+                    OPEN
+                </div>
+
+                <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
+                        {/* Branding */}
+                        <div className="md:col-span-2">
+                            <h3 className="text-2xl font-black uppercase tracking-tighter mb-6">The School of the Open</h3>
+                            <p className="text-gray-500 text-lg font-light leading-relaxed max-w-md">
+                                A cinematic exploration into alternative education, the de-schooling movement, and the radical pursuit of human freedom.
+                            </p>
+                        </div>
+
+                        {/* Quick Links */}
+                        <div>
+                            <h4 className="text-[10px] uppercase tracking-[0.4em] text-white font-bold mb-8">Navigation</h4>
+                            <ul className="space-y-4">
+                                {navLinks.map(link => (
+                                    <li key={link.name}>
+                                        <a href={link.href} className="text-sm text-gray-500 hover:text-amber-500 transition-colors">
+                                            {link.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Social & Platforms */}
+                        <div>
+                            <h4 className="text-[10px] uppercase tracking-[0.4em] text-white font-bold mb-8">Follow & Watch</h4>
+                            <div className="flex flex-wrap gap-4 mb-8">
+                                <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:border-white hover:text-white hover:bg-white/5 transition-all group">
+                                    <Instagram size={18} />
+                                </a>
+                                <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:border-white hover:text-white hover:bg-white/5 transition-all group">
+                                    <Twitter size={18} />
+                                </a>
+                                <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:border-white hover:text-white hover:bg-white/5 transition-all group">
+                                    <Mail size={18} />
+                                </a>
+                            </div>
+                            
+                            <div className="space-y-3">
+                                <a href="#" className="flex items-center gap-3 group">
+                                    <div className="px-2 py-0.5 bg-amber-500 text-black text-[9px] font-black rounded uppercase">IMDb</div>
+                                    <span className="text-xs text-gray-500 group-hover:text-white transition-colors">Official Movie Page</span>
+                                </a>
+                                <a href="#" className="flex items-center gap-3 group opacity-50 cursor-not-allowed">
+                                    <div className="px-2 py-0.5 bg-white text-black text-[9px] font-black rounded uppercase tracking-tighter">MUBI</div>
+                                    <span className="text-xs text-gray-500">Coming Soon</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex justify-center gap-6">
-                        <Instagram size={20} className="hover:text-gray-400 cursor-pointer transition-colors" />
-                        <Twitter size={20} className="hover:text-gray-400 cursor-pointer transition-colors" />
-                        <Mail size={20} className="hover:text-gray-400 cursor-pointer transition-colors" />
-                    </div>
-                    <div className="md:text-right">
-                        <p className="text-[10px] uppercase tracking-[0.2em] text-gray-600">
-                            &copy; 2026 Open Film Studios. <br /> All Rights Reserved.
+
+                    {/* Bottom Strip */}
+                    <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-medium text-gray-600">
+                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        </div>
+                        <p className="text-[10px] uppercase tracking-[0.4em] text-gray-600 font-bold">
+                            &copy; 2026 OPEN FILM STUDIOS. <br className="md:hidden" /> ALL RIGHTS RESERVED.
                         </p>
                     </div>
                 </div>
