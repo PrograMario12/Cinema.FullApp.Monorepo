@@ -4,6 +4,7 @@ import RequestScreeningForm from '../components/forms/RequestScreeningForm';
 import CinematicIntro from '../components/layout/CinematicIntro';
 import ScrollyText from '../components/sections/ScrollyText';
 import VideoMaskTransition from '../components/sections/VideoMaskTransition';
+import TeamSection from '../components/sections/TeamSection';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LandingPage = () => {
@@ -86,10 +87,7 @@ const LandingPage = () => {
             {/* Screening Form */}
             <RequestScreeningForm />
 
-            {/* Other sections placeholders */}
-            <section id="team" className="py-32 flex justify-center border-t border-white/5 bg-black">
-                <p className="text-gray-600 uppercase tracking-widest text-xs">Meet the Team Section</p>
-            </section>
+            <TeamSection />
 
             <section id="events" className="py-32 flex justify-center border-t border-white/5 bg-black">
                 <p className="text-gray-600 uppercase tracking-widest text-xs">Events & Screenings Section</p>
