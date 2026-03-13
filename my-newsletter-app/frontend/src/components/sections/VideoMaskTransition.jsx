@@ -40,7 +40,7 @@ const VideoMaskTransition = () => {
                     style={{ scale }}
                     onMouseEnter={() => setIsHovering(true)}
                     onMouseLeave={() => setIsHovering(false)}
-                    className="relative z-10 w-48 h-48 border-[120px] border-black rounded-full flex items-center justify-center shadow-[0_0_150px_rgba(0,0,0,1)] cursor-none"
+                    className="relative z-10 w-32 h-32 md:w-48 md:h-48 border-[80px] md:border-[120px] border-black rounded-full flex items-center justify-center shadow-[0_0_150px_rgba(0,0,0,1)] cursor-none"
                 >
                     {/* Inner Lens Area */}
                     <div className="w-full h-full rounded-full overflow-hidden relative group">

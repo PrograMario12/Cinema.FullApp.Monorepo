@@ -1,20 +1,20 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../components/layout/Layout';
-import RequestScreeningForm from '../components/forms/RequestScreeningForm';
-import CinematicIntro from '../components/layout/CinematicIntro';
 import ScrollyText from '../components/sections/ScrollyText';
 import VideoMaskTransition from '../components/sections/VideoMaskTransition';
+import CinematicIntro from '../components/layout/CinematicIntro';
 import TeamSection from '../components/sections/TeamSection';
 import EventsSection from '../components/sections/EventsSection';
-import PressKitSection from '../components/sections/PressKitSection';
 import ContactSection from '../components/sections/ContactSection';
-import { motion, AnimatePresence } from 'framer-motion';
+import RequestScreeningForm from '../components/forms/RequestScreeningForm';
+import PressKitSection from '../components/sections/PressKitSection';
 
 const LandingPage = () => {
     const [showIntro, setShowIntro] = useState(true);
 
     return (
-        <>
+        <div className="relative min-h-screen overflow-x-hidden">
             <AnimatePresence>
                 {showIntro && (
                     <CinematicIntro key="intro" onComplete={() => setShowIntro(false)} />
@@ -25,16 +25,13 @@ const LandingPage = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: showIntro ? 0 : 1 }}
                 transition={{ duration: 2, ease: "easeInOut" }}
-                className="relative"
+                className="relative overflow-x-hidden"
             >
                 <Layout>
                     {/* Hero Section */}
-                    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+                    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
                         <div className="absolute inset-0 z-0">
-                            <motion.img 
-                                initial={{ scale: 1.2, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 0.6 }}
-                                transition={{ duration: 2.5, ease: "easeOut" }}
+                            <img 
                                 src="/cinema_hero_background.png" 
                                 alt="The School of the Open" 
                                 className="w-full h-full object-cover"
@@ -51,38 +48,44 @@ const LandingPage = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0F1115] via-transparent to-black/40"></div>
                         </div>
 
-                        <div className="relative z-10 text-center max-w-5xl px-6">
-                            <motion.span 
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                className="inline-block px-4 py-1 mb-8 text-[10px] font-bold tracking-[0.5em] uppercase border border-white/20 rounded-full"
+                        <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: showIntro ? 0 : 1 }}
+                                transition={{ delay: 0.5, duration: 1 }}
+                                className="max-w-4xl mx-auto"
                             >
-                                A Documentary Film
-                            </motion.span>
-                            <h1 className="text-7xl md:text-9xl font-black mb-8 tracking-tighter uppercase leading-[0.85]">
-                                The School <br /> <span className="text-gray-500 italic">of the Open</span>
-                            </h1>
-                            
-                            <motion.p 
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
-                                className="text-lg md:text-2xl text-gray-300 font-light max-w-3xl mx-auto mb-12 leading-relaxed"
-                            >
-                                A feature documentary exploring the de-schooling movement <br className="hidden md:block" /> and the radical pursuit of true education.
-                            </motion.p>
-
-                            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-                                <button className="group relative px-10 py-5 bg-white text-black font-black uppercase text-[11px] tracking-[0.2em] rounded-full hover:bg-amber-500 hover:text-white transition-all duration-500 shadow-2xl flex items-center gap-3">
-                                    Watch Trailer
-                                    <div className="w-2 h-2 bg-black group-hover:bg-white rounded-full animate-pulse"></div>
-                                </button>
+                                <span className="text-[10px] md:text-sm uppercase tracking-[1em] text-amber-500 font-black mb-8 block drop-shadow-lg">
+                                    A Film by Open Studios
+                                </span>
+                                <h1 className="text-4xl sm:text-5xl md:text-[120px] font-black uppercase tracking-tighter leading-none mb-12 drop-shadow-2xl">
+                                    The School <br /> <span className="italic text-gray-400">of the</span> Open
+                                </h1>
                                 
-                                <a href="#request-screening" className="px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black uppercase text-[11px] tracking-[0.2em] rounded-full hover:bg-white/10 transition-all duration-500">
-                                    Request Screening
-                                </a>
-                            </div>
+                                <p className="text-lg md:text-2xl text-white/80 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                                    A documentary film exploring the de-schooling movement <br className="hidden md:block" /> and the true meaning of education.
+                                </p>
+
+                                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                                    <button className="px-12 py-5 bg-white text-black rounded-full font-black uppercase tracking-[0.3em] text-xs hover:bg-amber-500 hover:text-white transition-all transform hover:scale-105 shadow-2xl">
+                                        Watch Trailer
+                                    </button>
+                                    <a href="#request-screening" className="px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-full font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-white/10 transition-all">
+                                        Request Screening
+                                    </a>
+                                </div>
+                            </motion.div>
                         </div>
+
+                        {/* Animated Scroll Indicator */}
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: showIntro ? 0 : 0.5 }}
+                            transition={{ delay: 2, duration: 1 }}
+                            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+                        >
+                             <div className="w-px h-12 bg-gradient-to-b from-transparent via-white to-transparent"></div>
+                        </motion.div>
                     </section>
 
                     {/* Masking Transition */}
@@ -159,20 +162,20 @@ const LandingPage = () => {
                         </div>
                     </section>
 
-            {/* Screening Form */}
-            <RequestScreeningForm />
+                    {/* Screening Form */}
+                    <RequestScreeningForm />
 
-            <TeamSection />
+                    <TeamSection />
 
-            <EventsSection />
+                    <EventsSection />
 
-            <PressKitSection />
+                    <PressKitSection />
 
-            <ContactSection />
+                    <ContactSection />
 
-        </Layout>
+                </Layout>
             </motion.div>
-        </>
+        </div>
     );
 };
 
